@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020051429) do
+ActiveRecord::Schema.define(version: 20171020053032) do
+
+  create_table "properties", force: :cascade do |t|
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
+    t.string "nickname"
+    t.integer "propertyable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["propertyable_id"], name: "index_properties_on_propertyable_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
