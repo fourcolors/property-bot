@@ -25,6 +25,7 @@ gem 'puma', '~> 3.7'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 gem 'api-ai-ruby'
+gem 'pg'
 
 
 group :development, :test do
